@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="timeline">
+    <form>
+        <mat-form-field>
+            <input #input matInput (keyup)="searchGifs(input.value)" />
+        </mat-form-field>
+    </form>
+
+    <div *ngFor="let gif of gifs" class="col-md-10">
+        <mat-card class="gif-card">
+            <mat-card-footer>
+                <div mat-card-avatar></div>
+                <mat-card-title>{{gif.slug}}}</mat-card-title>
+            </mat-card-footer>
+            <img mat-card-image src="{{gif.images.fixed_height.url}}" alt="">
+        </mat-card>
+    </div>
+
+</div>
